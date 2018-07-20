@@ -8,16 +8,16 @@ export class AddExpensePage extends React.Component {
     this.props.addExpense(expense);
     this.props.history.push('/');
   };
-  render(){
+  render() {
     return (
       <div>
         <h1>Add Expense</h1>
-        <ExpenseForm 
-        onSubmit={this.onSubmit}
+        <ExpenseForm
+          onSubmit={this.onSubmit}
         />
       </div>
-    )
-  };
+    );
+  }
 }
 
 const mapDispatchToProps = (dispatch) => ({
