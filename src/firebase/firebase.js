@@ -1,38 +1,150 @@
 import * as firebase from 'firebase';
 
 const config = {
-    apiKey: "AIzaSyBdA2tQ9seuHspq4FJ34hNEpeLG6nBkygM",
-    authDomain: "expensify-6d91e.firebaseapp.com",
-    databaseURL: "https://expensify-6d91e.firebaseio.com",
-    projectId: "expensify-6d91e",
-    storageBucket: "expensify-6d91e.appspot.com",
-    messagingSenderId: "569713645074"
+    apiKey: process.env.FIREBASE_API_KEY,
+    authDomain: process.env.FIREBASE_AUTH_DOMAIN,
+    databaseURL: process.env.FIREBASE_DATABASE_URL,
+    projectId: process.env.FIREBASE_PROJECT_ID,
+    storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID
   };
 
 firebase.initializeApp(config);
 
-const database = firebase.database()
+const database = firebase.database();
 
-database.ref().set({
-    name: 'Nuwan Goonewardena',
-    age: 25,
-    isSingle: false,
-    location: {
-        city: 'Colombo',
-        country: 'Sri Lanka'
-    }
-});
+export { firebase, database as default };
 
-// database.ref().set('this is my data.');
+// // // child_removed
+// // database.ref('expenses').on('child_removed', (snapshot) => {
+// //     console.log(snapshot.key, snapshot.val());
+// // });
 
-database.ref('age').set(27);
-database.ref('location/city').set('New York');
+// // // child_changed
+// // database.ref('expenses').on('child_changed', (snapshot) => {
+// //     console.log(snapshot.key, snapshot.val());
+// // });
 
-// attributes
-//  height = cm
-//  weight = kg
+// // // child_added
+// // database.ref('expenses').on('child_added', (snapshot) => {
+// //     console.log(snapshot.key, snapshot.val());
+// // });
 
-database.ref('attributes').set({
-        height: 174,
-        weight: 80
-});
+
+// // database.ref('expenses')
+// //   .once('value')
+// //   .then((snapshot) => {
+// //       const expenses = [];
+
+// //       snapshot.forEach((childSnapshot) => {
+// //         expenses.push({
+// //             id: childSnapshot.key,
+// //             ...childSnapshot.val()
+// //         });
+// //       });
+
+// //       console.log(expenses);
+// //   });
+
+
+// // database.ref('expenses')
+// //   .on('value', (snapshot) => {
+// //     const expenses = [];
+
+// //     snapshot.forEach((childSnapshot) => {
+// //         expenses.push({
+// //             id: childSnapshot.key,
+// //             ...childSnapshot.val()
+// //         });
+// //     });
+// //     console.log(expenses);
+// //   });
+
+
+// database.ref('expenses').push({
+//    description: 'rents',
+//    note: '',
+//    anount: 184569500,
+//    createdAt: 3473429423
+// });
+
+
+// // database.ref('notes').push({
+// //     title: 'Course Topics',
+// //     body: 'React Native, Python'
+// // });
+
+// // database.ref('notes').set(notes);
+
+// // database.ref('notes/12')
+
+// // database.ref().on('value', (snapshot) => {
+// //     const val = snapshot.val();
+// //     console.log(`${val.name} is a ${val.job.title} at ${val.job.company}`);
+// // }, (e) => {
+// //     console.log('Error fetching value', e);
+// // });
+
+
+// // Change the data and make sure it reprints
+
+
+
+// // const onValueChange = database.ref().on('value', (snapshot) => {
+// //     console.log(snapshot.val());
+// // }, (e) => {
+// //     console.log('Error with data fetching', e);
+// // });
+
+// // setTimeout(() => {
+// //     database.ref('age').set(29);
+// // }, 3500);
+
+// // setTimeout(() => {
+// //     database.ref().off(onValueChange);
+// // }, 7000);
+
+// // setTimeout(() => {
+// //     database.ref('age').set(31);
+// // }, 10500);
+
+// // database.ref('location/city')
+// // .once('value')
+// // .then((snapshot) => {
+// //     const val = snapshot.val();
+// //     console.log(val);
+// // }).catch((e) => {
+// //     console.log('Error fetching data', e)
+// // });
+
+// // database.ref().set({
+// //     name: 'Nuwan Goonewardena',
+// //     age: 25,
+// //     stressLevel: 6,
+// //     job: {
+// //         title: 'Software Developer',
+// //         company: 'Google'
+// //     },
+// //     location: {
+// //         city: 'Colombo',
+// //         country: 'Sri Lanka'
+// //     }
+// // }).then (() => {
+// //     console.log('Data is saved');
+// // }).catch((e) => {
+// //     console.log('This failed.', e);
+// // });
+
+// // database.ref().update({
+// //     stressLevel: 9,
+// //     'job/company': 'Amazon',
+// //     'location/city': 'Seattle'
+// // });
+
+// // database.ref()
+// //     .remove()
+// //     .then (() => {
+// //     console.log('Data was removed.');
+// // }).catch((e) => {
+// //     console.log('Did not remove data.', e);
+// // });
