@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render RemoveModal page 1`] = `
+<Modal
+  ariaHideApp={true}
+  bodyOpenClassName="ReactModal__Body--open"
+  closeTimeoutMS={0}
+  contentLabel="Confirm Remove Expense"
+  isOpen={false}
+  parentSelector={[Function]}
+  portalClassName="ReactModalPortal"
+  shouldCloseOnOverlayClick={true}
+>
+  <h3>
+    Are you sure you want to remove this expense?
+  </h3>
+  <button
+    className="button"
+  >
+    Remove
+  </button>
+  <button
+    className="button button--secondary"
+  >
+    Cancel
+  </button>
+</Modal>
+`;
