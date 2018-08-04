@@ -4,18 +4,21 @@ exports[`should render RemoveModal page 1`] = `
 <Modal
   ariaHideApp={true}
   bodyOpenClassName="ReactModal__Body--open"
-  closeTimeoutMS={0}
+  className="modal"
+  closeTimeoutMS={200}
   contentLabel="Confirm Remove Expense"
   isOpen={false}
   parentSelector={[Function]}
   portalClassName="ReactModalPortal"
   shouldCloseOnOverlayClick={true}
 >
-  <h3>
+  <h3
+    className="modal__text"
+  >
     Are you sure you want to remove this expense?
   </h3>
   <button
-    className="button"
+    className="button modal__button"
   >
     Remove
   </button>
