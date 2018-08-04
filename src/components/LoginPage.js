@@ -6,10 +6,13 @@ export const LoginPage = ( {startLoginWithFacebook, loginWithGithub, startLogin}
     <div className="box-layout">
       <div className="box-layout__box">
         <h1 className="box-layout__title">Expensify</h1>
-        <p>It's time to get your expenses under control.</p>
-        <button className="button button--login-primary" onClick={startLogin}>Login with Google</button>
-        <button className="button button--login-secondary" onClick={loginWithGithub}>Login with Github</button>
-        <button className="button button--login-secondary" onClick={startLoginWithFacebook}>Login with Facebook</button>
+        <p>Get your expenses under control.</p>
+        <h3 className="login-text">Login to continue</h3>
+        <div className="button-container">
+        <button className="button--login google" onClick={startLogin} />
+        <button className="button--login github" onClick={loginWithGithub} />
+        <button className="button--login facebook" onClick={startLoginWithFacebook} />
+        </div>    
       </div>  
     </div>
   );

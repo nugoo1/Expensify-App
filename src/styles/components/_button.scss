@@ -18,12 +18,39 @@
     background: #888;
 }
 
-.button--login-primary{
-    background: $dark-blue;
+.login-text {
+    font-weight: 400;
+    font-style: italic;
+    margin: 5px 0;
+}
+.button-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 $l-size;
+}
+.button--login{
+    border-radius: 3px;    
+    display: inline-block;
+    height: 70px;
+    width: 70px;  
+    text-decoration: none;
+    margin-left: $s-size;
 }
 
-.button--login-secondary{
-    background: $blue;
-    margin-top: $s-size;
-    
+.google {
+    background: url('/images/google-icon.jpg');
+    background-size: cover;
 }
+
+.github{
+    background: url('/images/github-icon.jpg');
+    background-size: cover;
+}
+
+.facebook{
+    background: url('/images/facebook-icon.jpg');
+    background-size: cover;
+}
+
+

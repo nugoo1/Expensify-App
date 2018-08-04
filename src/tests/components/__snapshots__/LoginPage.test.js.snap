@@ -13,18 +13,26 @@ exports[`should render Login correctly 1`] = `
       Expensify
     </h1>
     <p>
-      It's time to get your expenses under control.
+      Get your expenses under control.
     </p>
-    <button
-      className="button button--login-primary"
+    <h3
+      className="login-text"
     >
-      Login with Google
-    </button>
-    <button
-      className="button button--login-secondary"
+      Login to continue
+    </h3>
+    <div
+      className="button-container"
     >
-      Sign in with Facebook
-    </button>
+      <button
+        className="button--login google"
+      />
+      <button
+        className="button--login github"
+      />
+      <button
+        className="button--login facebook"
+      />
+    </div>
   </div>
 </div>
 `;
