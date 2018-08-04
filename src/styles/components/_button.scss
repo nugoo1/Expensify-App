@@ -17,3 +17,13 @@
 .button--secondary{
     background: #888;
 }
+
+.button--login-primary{
+    background: $dark-blue;
+}
+
+.button--login-secondary{
+    background: $blue;
+    margin-top: $s-size;
+    
+}

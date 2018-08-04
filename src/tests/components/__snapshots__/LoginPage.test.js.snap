@@ -16,9 +16,14 @@ exports[`should render Login correctly 1`] = `
       It's time to get your expenses under control.
     </p>
     <button
-      className="button"
+      className="button button--login-primary"
     >
       Login with Google
+    </button>
+    <button
+      className="button button--login-secondary"
+    >
+      Sign in with Facebook
     </button>
   </div>
 </div>

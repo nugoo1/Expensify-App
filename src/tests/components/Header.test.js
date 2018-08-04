@@ -17,11 +17,26 @@ test('should call startLogout on button click', () => {
   expect(startLogoutSpy).toHaveBeenCalled();
 });
 
-test('should call startLogin on button click', () => {
-  const startLoginSpy = jest.fn();
-  const wrapper = shallow(<LoginPage startLogin={startLoginSpy} />);
-  wrapper.find('button').simulate('click', {
-    preventDefault: () => { }
-  });
-  expect(startLoginSpy).toHaveBeenCalled();
-});
+// test('should call startLogin on google login button click', () => {
+//   const buttonSpies = () => ({
+//     startLoginFacebook: () => jest.fn(),
+//     startLogin: () => jest.fn(),
+// });
+//   const wrapper = shallow(<LoginPage spies={ buttonSpies } />);
+//   wrapper.find('button').at(0).simulate('click', {
+//     preventDefault: () => { }
+//   });
+//   expect(buttonSpies().startLogin()).toHaveBeenCalled();
+// });
+
+// test('should call startLogin on google login button click', () => {
+//   const buttonSpies = () => ({
+//     startLogin: () => jest.fn(),
+//     startLoginFacebook: () => jest.fn()
+// });
+//   const wrapper = shallow(<LoginPage spies={ buttonSpies } />);
+//   wrapper.find('button').at(1).simulate('click', {
+//     preventDefault: () => { }
+//   });
+//   expect(buttonSpies().startLoginFacebook()).toHaveBeenCalled();
+// });
